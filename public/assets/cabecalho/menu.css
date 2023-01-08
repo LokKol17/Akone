@@ -1,0 +1,126 @@
+.menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    color: white;
+    background: var(--PurpleBlack);
+    transition: all 1s;
+    transform: translateY(-500px);
+    position: absolute;
+    z-index: 1;
+}
+.menu__lista {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.menu__lista__item {
+    font-family: var(--FontePrincipal);
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    transition: all .2s;
+    letter-spacing: 2px;
+}
+.menu__lista__item:hover {
+    transition: all .5s;
+    letter-spacing: 7px;
+    cursor: pointer;
+}
+
+.menu__container {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-items: center;
+}
+.menu__linha {
+    position: relative;
+    width: 80vw;
+    height: 0;
+    border: 2px solid var(--TwitchPurple);
+}
+.menu__linha__tl{
+    height: 0;
+    width: 0;
+    border-left: 10px solid var(--TwitchPurple);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+.menu__linha__tr{
+    height: 0;
+    width: 0;
+    border-right: 10px solid var(--TwitchPurple);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+
+.menu__cliente {
+    display: flex;
+    width: 100%;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+.menu__button__login, .menu__button__registro {
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    border: none;
+    margin: 0 0.5rem;
+}
+.menu__button__registro {
+    background: var(--RaisinBlack);
+    width: 140px;
+    transition: all .4s;
+}
+.menu__button__registro:hover {
+    transition: all .3s;
+    background: #221E2250;
+    cursor: pointer;
+}
+
+.menu__button__login {
+    background: var(--TwitchPurple);
+    width: 100px;
+    transition: all .4s;
+}
+.menu__button__login:hover {
+    background: #9966E750;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+
+/*////////// Responsivo //////////*/
+
+@media screen and (max-width: 599px){
+    .menu {
+        height: 470px;
+        transform: translateY(-570px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .menu__cliente {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .menu__lista__item {
+        font-size: 1.2rem;
+        margin: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .menu__lista__item:hover {
+        transition: all .3s;
+        letter-spacing: 3px;
+        cursor: pointer;
+    }
+}

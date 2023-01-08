@@ -1,0 +1,16 @@
+.popular-hoje {
+    font-family: var(--FontePrincipal);
+    color: white;
+}
+.popular-hoje__titulo {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+.popular-hoje__container {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: flex-start;
+    margin: 2rem 0;
+}

@@ -1,0 +1,75 @@
+.cabecalho__pesquisa {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+}
+.cabecalho__pesquisa--mobile {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+.cabecalho__pesquisa__input, .cabecalho__pesquisa__input--mobile {
+    width: 200px;
+    height: 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    margin: 0 1.5rem;
+    align-self: flex-end;
+    font-size: 1rem;
+}
+.cabecalho__pesquisa__button, .cabecalho__pesquisa__button--mobile {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+.cabecalho__pesquisa__button {
+    box-sizing: border-box;
+}
+.cabecalho__pesquisa__button:hover {
+    width: 50px;
+    height: 50px;
+    background: #9966E750;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.cabecalho__pesquisa__button--mobile {
+    border-radius: 5px;
+    background: var(--TwitchPurple);
+    padding: 5px;
+    box-sizing: content-box;
+}
+
+.cabecalho__pesquisa__button--img, .cabecalho__pesquisa__button--img--mobile {
+    width: 40px;
+    height: 40px;
+}
+
+
+@media screen and (max-width: 599px) {
+    .cabecalho__pesquisa {
+        display: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .cabecalho__pesquisa--mobile {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .cabecalho__pesquisa--mobile {
+        align-self: center;
+        margin: 0;
+    }
+}

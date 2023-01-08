@@ -1,0 +1,41 @@
+.popular-semana {
+    color: white;
+    font-family: var(--FontePrincipal);
+}
+.popular-semana__titulo {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+.popular-semana__container {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+.popular-semana__item {
+    position: relative;
+    width: 20%;
+    height: 30vw;
+    background: #44355B;
+    margin: 1rem;
+    transition: all .2s;
+}
+.popular-semana__item:hover {
+    cursor: pointer;
+    transition: all .3s;
+    transform: scale(1.07);
+}
+.popular-semana__item--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--TwitchPurple);
+    width: 50px;
+    height: 50px;
+    border-radius: 0 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
