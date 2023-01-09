@@ -37,3 +37,26 @@
     transition: all .3s;
     font-size: 1.4rem;
 }
+
+@media screen and (max-width: 1020px) {
+    .novos-episodios__item {
+        width: 45%;
+        height: 15vw;
+    }
+}
+@media screen and (max-width: 705px) {
+    .novos-episodios__item {
+        width: 45%;
+        height: 15vw;
+        margin: 8px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .novos-episodios__item {
+        width: 90%;
+        height: 30vw;
+    }
+    .novos-episodios__item--ocultar {
+        display: none;
+    }
+}

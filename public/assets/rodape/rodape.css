@@ -35,3 +35,24 @@
     color: var(--TwitchPurple);
     text-decoration: underline;
 }
+
+@media screen and (max-width: 450px) {
+    .rodape {
+        padding: 1rem;
+    }
+    .rodape__lista__item {
+        line-height: 2rem;
+    }
+    .rodape__discord {
+        margin: 3rem 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    .rodape {
+        height: 360px;
+        font-size: 1.2rem;
+    }
+    .rodape__container {
+        flex-flow: column nowrap;
+    }
+}

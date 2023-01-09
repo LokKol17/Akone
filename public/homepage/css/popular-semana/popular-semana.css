@@ -39,3 +39,24 @@
     align-items: center;
     font-size: 1.5rem;
 }
+
+@media screen and (max-width: 710px) {
+    .popular-semana__item {
+        margin: 8px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .popular-semana__item {
+        width: 35%;
+        height: 47vw;
+    }
+    .popular-semana__item--ocultar {
+        display: none;
+    }
+}
+@media screen and (max-width: 450px) {
+    .popular-semana__item {
+        width: 40%;
+        height: 60vw;
+    }
+}

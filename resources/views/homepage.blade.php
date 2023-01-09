@@ -59,7 +59,7 @@
         <h2 class="novos-episodios__titulo">Novos Episódios</h2>
         <div class="novos-episodios__container">
             @foreach($novoEpisodioItem as $index => $name)
-                <div class="novos-episodios__item">
+                <div class="novos-episodios__item @if(($index + 1) > 6) novos-episodios__item--ocultar @endif">
                     <img class="novos-episodios__img" src="#" alt="{{ $index }}">
                     <p class="novos-episodios__nome">{{ $name }}</p>
                 </div>
@@ -71,10 +71,10 @@
         <h2 class="popular-semana__titulo">Populares da Semana</h2>
         <div class="popular-semana__container">
             @foreach($popularSemana as $index => $name)
-                <div class="popular-semana__item">
+                <div class="popular-semana__item @if(($index + 1) > 4) popular-semana__item--ocultar @endif" >
                     <img src="#" alt="{{ $name }}">
-                    @if($index < 3)
-                        <div class="popular-semana__item--top">{{ $index + 1 }}</div>
+                    @if(($index + 1) < 4)
+                        <div class="popular-semana__item--top">{{ $index + 1}}</div>
                     @endif
                 </div>
             @endforeach
