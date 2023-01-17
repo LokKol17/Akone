@@ -19,7 +19,9 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/' ,[HomepageController::class, 'index'])->name('homepage');
-
+Route::get('/', function () {
+    return to_route('homepage');
+});
+Route::get('/home', [HomepageController::class, 'index'])->name('homepage');
 
 Route::fallback([PageDontExistsController::class, 'index']);

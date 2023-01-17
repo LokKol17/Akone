@@ -1,5 +1,7 @@
+@import "../../../assets/abstract/variaveis";
+
 .popular-hoje {
-    font-family: var(--FontePrincipal);
+    font-family: $fontePrincipal;
     color: white;
 }
 .popular-hoje__titulo {

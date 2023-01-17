@@ -1,0 +1,122 @@
+@import "../../abstract/variaveis";
+
+.menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    color: white;
+    background: $purpleBlack;
+    transition: all 1s;
+    transform: translateY(-500px);
+    position: absolute;
+    z-index: 1;
+    &__lista {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        &__item {
+            font-family: $fontePrincipal;
+            font-size: 1.5rem;
+            margin: 1.5rem;
+            transition: all .2s;
+            letter-spacing: 2px;
+            &:hover {
+                transition: all .5s;
+                letter-spacing: 7px;
+                cursor: pointer;
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__linha {
+        position: relative;
+        width: 80vw;
+        height: 0;
+        border: 2px solid $twitchPurple;
+    }
+    &__linha__tl{
+        height: 0;
+        width: 0;
+        border-left: 10px solid $twitchPurple;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+    }
+    &__linha__tr{
+        height: 0;
+        width: 0;
+        border-right: 10px solid $twitchPurple;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+    }
+    &__cliente {
+        display: flex;
+        width: 100%;
+        align-self: flex-end;
+        justify-content: flex-end;
+    }
+    &__button__login, &__button__registro {
+        height: 50px;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+        border: none;
+        margin: 0 0.5rem;
+    }
+    &__button__registro {
+        background: $raisinBlack;
+        width: 140px;
+        transition: all .4s;
+        &:hover {
+            transition: all .3s;
+            background: #221E2250;
+            cursor: pointer;
+        }
+    }
+    &__button__login {
+        background: $twitchPurple;
+        width: 100px;
+        transition: all .4s;
+        &:hover {
+            background: #9966E750;
+            transition: all .3s;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 599px){
+    .menu {
+        height: 470px;
+        transform: translateY(-570px);
+    }
+}
+@media screen and (max-width: 480px) {
+    .menu__cliente {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .menu__lista__item {
+        font-size: 1.2rem;
+        margin: 1.2rem;
+        letter-spacing: 1px;
+        &:hover {
+            transition: all .3s;
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+    }
+}

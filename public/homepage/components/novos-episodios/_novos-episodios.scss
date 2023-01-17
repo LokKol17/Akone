@@ -1,0 +1,64 @@
+@import "../../../assets/abstract/variaveis";
+
+.novos-episodios {
+    color: white;
+    font-family: $fontePrincipal;
+    &__titulo {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+    &__container {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: row wrap;
+    }
+    &__item {
+        position: relative;
+        width: 30%;
+        height: 13vw;
+        background: $englishViolet;
+        margin: 1rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+    &__nome {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transition: all .2s;
+    }
+    &__item:hover &__nome {
+        transition: all .3s;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media screen and (max-width: 1020px) {
+    .novos-episodios__item {
+        width: 45%;
+        height: 15vw;
+    }
+}
+@media screen and (max-width: 705px) {
+    .novos-episodios__item {
+        width: 45%;
+        height: 15vw;
+        margin: 8px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .novos-episodios__item {
+        width: 90%;
+        height: 30vw;
+    }
+    .novos-episodios__item--ocultar {
+        display: none;
+    }
+}

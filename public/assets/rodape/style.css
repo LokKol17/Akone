@@ -1,0 +1,60 @@
+.rodape {
+  padding: 2rem;
+  background: var(--PurpleBlack);
+  height: 240px;
+  color: white;
+  font-family: var(--FontePrincipal);
+  font-size: 1.5rem;
+}
+.rodape__titulo {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+.rodape__container {
+  display: flex;
+  justify-content: space-between;
+}
+.rodape__lista {
+  text-decoration: underline;
+}
+.rodape__lista__item {
+  margin-top: 2rem;
+  transition: all 0.2s;
+}
+.rodape__lista__item:hover {
+  transition: all 0.5s;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+.rodape__discord {
+  width: 300px;
+  margin: 3rem 2rem;
+}
+.rodape__discord a {
+  color: var(--TwitchPurple);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+  .rodape {
+    padding: 1rem;
+  }
+  .rodape__lista__item {
+    line-height: 2rem;
+  }
+  .rodape__discord {
+    margin: 3rem 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .rodape {
+    height: 360px;
+    font-size: 1.2rem;
+  }
+  .rodape__container {
+    flex-flow: column nowrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

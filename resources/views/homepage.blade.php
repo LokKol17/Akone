@@ -1,17 +1,6 @@
 <x-layoult title="Homepage - Akone">
 <x-slot name="css">
-    <link rel="stylesheet" href="{{ asset('./homepage/css/divisoria/divisoria.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('./homepage/css/popular-hoje/popular-hoje.css') }}">
-    <link rel="stylesheet" href=" {{ asset('./homepage/css/popular-hoje/img/img.css') }}">
-    <link rel="stylesheet" href="{{ asset('./homepage/css/popular-hoje/info/info.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('./homepage/css/categorias/categorias.css') }}">
-    <link rel="stylesheet" href="{{ asset('./homepage/css/categorias/categoria.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('./homepage/css/novos-episodios/novos-episodios.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('./homepage/css/popular-semana/popular-semana.css') }}">
+    <link rel="stylesheet" href="{{ asset('./homepage/style.css') }}">
 </x-slot>
 
 <main class="principal">

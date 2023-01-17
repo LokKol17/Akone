@@ -1,0 +1,40 @@
+@import "../../../assets/abstract/variaveis";
+
+.categoria {
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    width: 150px;
+    min-width: 150px;
+    background: $englishViolet;
+    margin-right: 1.5rem;
+    box-sizing: border-box;
+    padding: 1rem 0;
+    transition: all .3s;
+    &:hover {
+        cursor: pointer;
+        transition: all .5s;
+        border: 2px solid #ffffff80;
+    }
+    &:hover &__icone{
+        width: 60px;
+        height: 60px;
+        transition: all .5s;
+    }
+    &__icone {
+        background: #ffffff50;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        margin: 1rem 0;
+        transition: all .4s;
+    }
+    &__titulo {
+        font-size: 1.1rem;
+    }
+}
+
+
+

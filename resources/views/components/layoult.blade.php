@@ -7,11 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ asset('./css/root.css') }}">
-    <link rel="stylesheet" href="{{ asset('./assets/cabecalho/cabecalho.css') }}">
-    <link rel="stylesheet" href="{{ asset('./assets/cabecalho/pesquisa.css') }}">
-    <link rel="stylesheet" href="{{ asset('./assets/cabecalho/hamburguer.css') }}">
-    <link rel="stylesheet" href="{{ asset('./assets/cabecalho/menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('./assets/rodape/rodape.css') }}">
+    <link rel="stylesheet" href="{{ asset('./assets/cabecalho/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('./assets/rodape/style.css') }}">
     @isset($css)
     {{ $css }}
     @endisset

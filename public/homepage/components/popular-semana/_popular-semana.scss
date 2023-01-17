@@ -1,0 +1,64 @@
+@import "../../../assets/abstract/variaveis";
+
+.popular-semana {
+    color: white;
+    font-family: $fontePrincipal;
+    &__titulo {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+    &__container {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: row wrap;
+    }
+    &__item {
+        position: relative;
+        width: 20%;
+        height: 30vw;
+        background: $englishViolet;
+        margin: 1rem;
+        transition: all .2s;
+        &:hover {
+            cursor: pointer;
+            transition: all .3s;
+            transform: scale(1.07);
+        }
+        &--top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $twitchPurple;
+            width: 50px;
+            height: 50px;
+            border-radius: 0 0 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .popular-semana__item {
+        margin: 8px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .popular-semana__item {
+        width: 35%;
+        height: 47vw;
+        &--ocultar {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .popular-semana__item {
+        width: 40%;
+        height: 60vw;
+    }
+}

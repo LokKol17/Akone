@@ -1,0 +1,27 @@
+@import "../assets/abstract/variaveis";
+
+body {
+    background: $purpleNotSoBlack;
+}
+h1 {
+    color: white;
+    font-size: 2rem;
+    font-family: $fontePrincipal;
+}
+main {
+    top: 0;
+    height: auto;
+    background: $purpleNotSoBlack;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+
+@import "components/categorias/categoria";
+@import "components/categorias/categorias";
+@import "components/divisoria/divisoria";
+@import "components/novos-episodios/novos-episodios";
+@import "components/popular-hoje/img/img";
+@import "components/popular-hoje/info/info";
+@import "components/popular-hoje/popular-hoje";
+@import "components/popular-semana/popular-semana";
