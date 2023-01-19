@@ -1,4 +1,4 @@
-<x-layoult title="Homepage - Akone">
+<x-layoult title="Homepage - Akone" :mensagem="$mensagem">
 <x-slot name="css">
     <link rel="stylesheet" href="{{ asset('./homepage/style.css') }}">
 </x-slot>

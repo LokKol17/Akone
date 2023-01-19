@@ -12,10 +12,18 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public $timestamps = false;
     protected $fillable = [
         'nick',
         'email',
         'password_hash',
     ];
+
+    protected $table = 'users';
+
+    public function getAuthPassword()
+    {
+        return $this->password_hash;
+    }
 
 }

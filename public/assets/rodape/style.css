@@ -1,10 +1,12 @@
 .rodape {
   padding: 2rem;
-  background: var(--PurpleBlack);
+  background: #07060E;
   height: 240px;
   color: white;
-  font-family: var(--FontePrincipal);
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
+  position: relative;
+  bottom: 0;
 }
 .rodape__titulo {
   font-size: 2rem;
@@ -32,7 +34,7 @@
   margin: 3rem 2rem;
 }
 .rodape__discord a {
-  color: var(--TwitchPurple);
+  color: #9966E7;
   text-decoration: underline;
 }
 

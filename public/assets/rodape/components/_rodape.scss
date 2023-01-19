@@ -2,11 +2,13 @@
 
 .rodape {
     padding: 2rem;
-    background: var(--PurpleBlack);
+    background: $purpleBlack;
     height: 240px;
     color: white;
-    font-family: var(--FontePrincipal);
+    font-family: $fontePrincipal;
     font-size: 1.5rem;
+    position: relative;
+    bottom: 0;
     &__titulo {
         font-size: 2rem;
         letter-spacing: 3px;
@@ -32,7 +34,7 @@
         width: 300px;
         margin: 3rem 2rem;
         & a {
-            color: var(--TwitchPurple);
+            color: $twitchPurple;
             text-decoration: underline;
         }
     }

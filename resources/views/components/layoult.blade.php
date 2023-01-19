@@ -52,15 +52,34 @@
             </div>
 
             <div class="menu__cliente">
-                <button class="menu__button__registro">Registrar</button>
-                <button class="menu__button__login">Log In</button>
+                @guest()
+                    <a href="{{ route('signup') }}"><button class="menu__button__registro">Registrar</button></a>
+                    <a href="{{ route('signin') }}"><button class="menu__button__login">Log In</button></a>
+                @endguest
+                @auth()
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button class="menu__button__registro">Logout</button>
+                    </form>
+
+                        <a href="{{ route('signin') }}"><button class="menu__button__login">Conta</button></a>
+                @endif
+
             </div>
         </div>
     </header>
+    @isset($mensagem)
+        @if($mensagem != null)
+            <aside>
+                {{ $mensagem }}
+            </aside>
+        @endif
+    @endisset
+    <main>
 
-    {{ $slot }}
+        {{ $slot }}
 
-
+    </main>
     <footer class="rodape">
         <h2 class="rodape__titulo">Akone</h2>
         <div class="rodape__container">

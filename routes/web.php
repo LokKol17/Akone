@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PageDontExistsController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UsersCotroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +21,14 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', function () {
-    return to_route('homepage');
-});
+Route::get('/', [HomepageController::class, 'index']);
 Route::get('/home', [HomepageController::class, 'index'])->name('homepage');
+
+Route::get('/signup', [UsersCotroller::class, 'index'])->name('signup');
+Route::post('/signup', [UsersCotroller::class, 'store']);
+
+Route::get('/signin', [LoginController::class, 'index'])->name('signin');
+Route::post('/signin', [LoginController::class, 'store']);
+Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
 
 Route::fallback([PageDontExistsController::class, 'index']);

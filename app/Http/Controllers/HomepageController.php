@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $tags = ['Esquizofrenico', 'Romance', 'Desordenado'];
         $categorias = ['Ação', 'Comedia', 'Aventura', 'Terror', 'Romance'];
@@ -16,13 +16,15 @@ class HomepageController extends Controller
         $novoEpisodioItem = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
         $popularSemana = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
-        return view('homepage')
+        $mensagem = $request->session()->get('mensagem');
+        return view('homepage.index')
             ->with('imagemPopularHoje', $imagemPopularHoje)
             ->with('nomePopularHoje', $nomePopularHoje)
             ->with('descricaoPopularHoje', $descricaoPopularHoje)
             ->with('categorias', $categorias)
             ->with('tags', $tags)
             ->with('novoEpisodioItem', $novoEpisodioItem)
-            ->with('popularSemana', $popularSemana);
+            ->with('popularSemana', $popularSemana)
+            ->with('mensagem', $mensagem);
     }
 }
