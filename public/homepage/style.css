@@ -96,10 +96,10 @@
   cursor: pointer;
   user-select: none;
 }
-.categorias__botao__botao--esq {
+.categorias__botao--esq {
   left: 1rem;
 }
-.categorias__botao__botao--dir {
+.categorias__botao--dir {
   right: 1rem;
 }
 .categorias__botao--esq:hover, .categorias__botao--dir:hover {
@@ -346,6 +346,11 @@
   background: #44355B;
   margin: 1rem;
   transition: all 0.2s;
+}
+.popular-semana__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .popular-semana__item:hover {
   cursor: pointer;

@@ -1,18 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\LoginController;
 
 use App\Http\Controllers\GeneralFunctions\MessageTrait;
 use Illuminate\Http\Request;
 
-class PageDontExistsController extends Controller
+class LoginControllerIndex
 {
     use MessageTrait;
+
     public function index(Request $request)
     {
-        $this->putMessage($request, 'Página não encontrada');
         $mensagem = $this->getMessage($request);
-        return view('pageNotFound')
-            ->with('mensagem', $mensagem);
+        return view('signin.index')->with('mensagem', $mensagem);
     }
 }

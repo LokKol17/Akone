@@ -1,0 +1,184 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 80%;
+  height: auto;
+  min-height: 400px;
+  background: #44355B;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+}
+.form__titulo {
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+}
+.form__container {
+  height: 250px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 2rem 4rem 2rem auto;
+}
+.form__container .container__capa {
+  position: relative;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 4 span;
+  width: 180px;
+  height: 240px;
+  background: #9966E7;
+}
+.form__container .container__capa .capa__upload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #221E22;
+  opacity: 0;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.form__container .container__capa .capa__upload input {
+  display: none;
+}
+.form__container .container__capa .capa__upload:hover {
+  opacity: 1;
+  transition: all 0.2s;
+}
+.form__container .container__capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.form__container .form__group {
+  grid-column: 2;
+  grid-row: 4 span;
+  display: grid;
+  grid-template-rows: 2rem 2rem 2rem auto;
+  font-family: "Montserrat", sans-serif;
+  row-gap: 10px;
+}
+.form__container .form__group label {
+  font-size: 2rem;
+}
+.form__container .form__group input, .form__container .form__group textarea {
+  width: 90%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+}
+.form__container .form__group input:focus-within, .form__container .form__group textarea:focus-within {
+  border: 3px solid #9966E7;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3764705882);
+}
+.form__container .form__group .form__label--nome {
+  grid-row: 1;
+}
+.form__container .form__group .form__label--sinopse {
+  grid-row: 3;
+}
+.form__container .form__group .form__input--nome {
+  grid-row: 2;
+}
+.form__container .form__group .form__input--sinopse {
+  grid-row: 4;
+}
+.form__container--serie {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  height: auto;
+  min-height: 300px;
+}
+.form__container--serie .temporadas {
+  margin: 1rem;
+}
+.form__container--serie .temporadas .temporada {
+  width: 300px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.form__container--serie .temporadas .temporada .temporada__titulo {
+  width: 300px;
+  height: 50px;
+  background: #9966E7;
+  color: white;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.form__container--serie .temporadas .temporada .episodio {
+  display: flex;
+  width: 250px;
+  height: 40px;
+  background: #221E22;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  box-sizing: border-box;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.form__container--serie .temporadas .temporada .episodio input {
+  display: none;
+  cursor: pointer;
+}
+.form__container--serie .temporadas .temporada .episodio:hover input {
+  display: block;
+}
+.form__container--serie .temporadas .temporada .episodio:hover p {
+  display: none;
+  cursor: pointer;
+}
+.form__container--serie .controlador {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.form__container--serie .controlador .adicionar {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.form__container--serie .controlador .adicionarTemporada, .form__container--serie .controlador .adicionarEpisodio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background: #221E22;
+  margin: 2px 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+.form__container--serie .controlador .adicionarTemporada:hover, .form__container--serie .controlador .adicionarEpisodio:hover {
+  background: #07060E;
+}
+.form__container--serie .controlador .submit {
+  margin: 10px;
+  width: 300px;
+  height: 100px;
+  background: #9966E7;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.form__container--serie .controlador .submit:hover {
+  background: rgba(153, 102, 231, 0.5647058824);
+  transition: all 0.2s;
+}
+
+/*# sourceMappingURL=style.css.map */

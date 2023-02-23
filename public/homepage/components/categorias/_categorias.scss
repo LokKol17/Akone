@@ -62,13 +62,11 @@
             cursor: pointer;
             user-select: none;
         }
-        &__botao {
-            &--esq {
-                left: 1rem;
-            }
-            &--dir {
-                right: 1rem;
-            }
+        &--esq {
+            left: 1rem;
+        }
+        &--dir {
+            right: 1rem;
         }
         &--esq:hover, &--dir:hover {
             transition: all .6s;

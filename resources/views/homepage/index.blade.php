@@ -59,9 +59,9 @@
     <section class="popular-semana">
         <h2 class="popular-semana__titulo">Populares da Semana</h2>
         <div class="popular-semana__container">
-            @foreach($popularSemana as $index => $name)
+            @foreach($popularSemana as $index => $anime)
                 <div class="popular-semana__item @if(($index + 1) > 4) popular-semana__item--ocultar @endif" >
-                    <img src="#" alt="{{ $name }}">
+                    <img src="{{ asset($anime->imagem_path) }}" alt="{{ $anime->nome}}">
                     @if(($index + 1) < 4)
                         <div class="popular-semana__item--top">{{ $index + 1}}</div>
                     @endif

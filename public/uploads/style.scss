@@ -1,0 +1,192 @@
+@import "../assets/abstract/variaveis";
+
+main {
+    display: flex;
+    justify-content: center;
+}
+.form {
+    width: 80%;
+    height: auto;
+    min-height: 400px;
+    background: $englishViolet;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    &__titulo {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+    &__container {
+        height: 250px;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 2rem 4rem 2rem auto;
+        .container__capa {
+            position: relative;
+            margin: auto;
+            grid-column: 1;
+            grid-row: 4 span;
+            width: 150px * 1.2;
+            height: 200px * 1.2;
+            background: $twitchPurple;
+            .capa__upload {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $raisinBlack;
+                opacity: 0;
+                transition: all .2s;
+                cursor: pointer;
+                input {
+                    display: none;
+                }
+                &:hover {
+                    opacity: 1;
+                    transition: all .2s;
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .form__group {
+            grid-column: 2;
+            grid-row: 4 span;
+            display: grid;
+            grid-template-rows: 2rem 2rem 2rem auto;
+            font-family: $fontePrincipal;
+            row-gap: 10px;
+            label {
+                font-size: 2rem;
+            }
+            input, textarea {
+                width: 90%;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                outline: none;
+                box-sizing: border-box;
+                &:focus-within {
+                    border: 3px solid $twitchPurple;
+                    box-shadow: 2px 2px 5px #00000060;
+                }
+            }
+            .form__label {
+                &--nome {
+                    grid-row: 1;
+                }
+                &--sinopse {
+                    grid-row: 3;
+                }
+            }
+            .form__input {
+                &--nome {
+                    grid-row: 2;
+                }
+                &--sinopse {
+                    grid-row: 4;
+                }
+            }
+
+        }
+    }
+    &__container--serie {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+        height: auto;
+        min-height: 300px;
+        .temporadas {
+            margin: 1rem;
+            .temporada {
+                width: 300px;
+                display: flex;
+                flex-flow: column nowrap;
+
+                .temporada__titulo {
+                    width: 300px;
+                    height: 50px;
+                    background: $twitchPurple;
+                    color: white;
+                    font-size: 2rem;
+                    font-family: $fontePrincipal;
+                    text-align: center;
+                }
+
+                .episodio {
+                    display: flex;
+                    width: 250px;
+                    height: 40px;
+                    background: $raisinBlack;
+                    font-family: $fontePrincipal;
+                    font-size: 1rem;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: underline;
+                    box-sizing: border-box;
+                    border: 2px solid black;
+                    cursor: pointer;
+                    input {
+                        display: none;
+                        cursor: pointer;
+                    }
+                    &:hover {
+                        input {
+                            display: block;
+                        }
+                        p {
+                            display: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .controlador {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            .adicionar {
+                display: flex;
+                flex-flow: row nowrap;
+                &Temporada, &Episodio {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 200px;
+                    height: 60px;
+                    background: $raisinBlack;
+                    margin: 2px 1rem;
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    user-select: none;
+                    &:hover {
+                        background: $purpleBlack;
+                    }
+                }
+            }
+            .submit {
+                margin: 10px;
+                width: 300px;
+                height: 100px;
+                background: $twitchPurple;
+                color: white;
+                font-size: 2rem;
+                border: none;
+                border-radius: 15px;
+                transition: all .2s;
+                cursor: pointer;
+                &:hover {
+                    background: $twitchPurpleOpaco;
+                    transition: all .2s;
+                }
+            }
+        }
+    }
+}

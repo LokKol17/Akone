@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{{ asset('storage/favicon/hashixfavico.ico') }}">
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ asset('./css/root.css') }}">
     <link rel="stylesheet" href="{{ asset('./assets/cabecalho/style.css') }}">
@@ -62,7 +63,11 @@
                         <button class="menu__button__registro">Logout</button>
                     </form>
 
-                        <a href="{{ route('signin') }}"><button class="menu__button__login">Conta</button></a>
+                        <a href="{{ route('account') }}"><button class="menu__button__login">Conta</button></a>
+
+                    @if(Auth::user()['id'] === 1)
+                        <a href="{{ route('upload') }}"><button class="menu__button__login admin">Admin</button></a>
+                    @endif
                 @endif
 
             </div>
