@@ -2,13 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use App\Http\Controllers\GeneralFunctions\MessageTrait;
+use App\Http\Controllers\GeneralFunctions\FlashMessageHandler;
 use Closure;
 use Illuminate\Http\Request;
 
 class AdminMiddleware
 {
-    use MessageTrait;
     /**
      * Handle an incoming request.
      *
@@ -20,7 +19,7 @@ class AdminMiddleware
     {
         if (\Auth::check() === false || \Auth::user()['id'] !== 1) {
             return to_route('homepage')
-                ->with($this->putMessage($request, 'Somente admins podem acessar isto'));
+                ->with(FlashMessageHandler::putMessage($request, 'Somente admins podem acessar isto'));
         }
         return $next($request);
     }

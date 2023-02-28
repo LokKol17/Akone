@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\GeneralFunctions\GetAnime;
+use App\Http\Controllers\GeneralFunctions\AnimeHandler;
 
 class AnimeController
 {
-    use getAnime;
-    public function index()
+    public function index(): string
     {
         return 'Hello World';
     }
 
-    public function show($id)
+    public function show($id): string
     {
-        $anime = $this->getAnime($id);
-        return $anime;
+        return AnimeHandler::getAnime($id);
     }
 }

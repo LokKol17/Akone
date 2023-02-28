@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\UsersController;
 
-use App\Http\Controllers\GeneralFunctions\MessageTrait;
+use App\Http\Controllers\GeneralFunctions\FlashMessageHandler;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -10,14 +10,13 @@ use Illuminate\Support\Facades\Auth;
 
 class UsersControllerStore
 {
-    use MessageTrait;
     public function store(Request $request): RedirectResponse
     {
         $input = $request->except('_token');
 
         $validator = new UserValidator($input);
         if (!$validator->validate()) {
-            $this->putMessage($request, $validator->errorMessage());
+            FlashMessageHandler::putMessage($request, $validator->errorMessage());
             return back();
         }
 
@@ -26,8 +25,9 @@ class UsersControllerStore
             'email' => $input['email'],
             'password_hash' => $validator->hash(),
         ]);
+
         Auth::login($user);
-        $this->putMessage($request, 'Conta criada com sucesso!');
+        FlashMessageHandler::putMessage($request, 'Conta criada com sucesso!');
         return to_route('homepage');
     }
 }

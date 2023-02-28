@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\UsersController;
 
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class UserValidator

@@ -6,7 +6,10 @@ use App\Http\Controllers\LoginController\LoginControllerDestroy;
 use App\Http\Controllers\LoginController\LoginControllerIndex;
 use App\Http\Controllers\LoginController\LoginControllerStore;
 use App\Http\Controllers\PageDontExistsController;
-use App\Http\Controllers\UploadController\UploadController;
+use App\Http\Controllers\UploadController\UploadControllerEdit;
+use App\Http\Controllers\UploadController\UploadControllerIndex;
+use App\Http\Controllers\UploadController\UploadControllerPut;
+use App\Http\Controllers\UploadController\UploadControllerStore;
 use App\Http\Controllers\UsersController\UsersControllerIndex;
 use App\Http\Controllers\UsersController\UsersControllerStore;
 use App\Http\Middleware\AdminMiddleware;
@@ -40,14 +43,14 @@ Route::post('/logout', [LoginControllerDestroy::class, 'destroy'])->name('logout
 
 Route::get('/account', [AccountControllerIndex::class, 'index'])->name('account');
 
-Route::get('/upload', [UploadController::class, 'index'])->name('upload')
+Route::get('/upload', [UploadControllerIndex::class, 'index'])->name('upload')
     ->middleware([AdminMiddleware::class]);
-Route::post('/upload', [UploadController::class, 'store']);
+Route::post('/upload', [UploadControllerStore::class, 'store']);
 
-Route::get('/upload/{id}', [UploadController::class, 'edit'])->name('upload.edit')
+Route::get('/upload/{id}', [UploadControllerEdit::class, 'edit'])->name('upload.edit')
     ->middleware([AdminMiddleware::class]);
 
-Route::put('/upload/{id}', [UploadController::class, 'put'])->name('upload.put')
+Route::put('/upload/{id}', [UploadControllerPut::class, 'put'])->name('upload.put')
     ->middleware([AdminMiddleware::class]);
 
 
