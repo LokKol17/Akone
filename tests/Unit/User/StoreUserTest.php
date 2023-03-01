@@ -1,11 +1,9 @@
-<?php /** @noinspection ALL */
+<?php
 
 namespace User;
 
 use App\Http\Controllers\UsersController\UserValidator;
-use App\Http\Controllers\UsersCotroller;
-use Illuminate\Http\Request;
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class StoreUserTest extends TestCase
 {

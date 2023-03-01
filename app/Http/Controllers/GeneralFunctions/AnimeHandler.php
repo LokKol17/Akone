@@ -21,11 +21,6 @@ class AnimeHandler
         Storage::put(self::PATH_TO_ANIMES_DIRECTORY . $animeName, $file);
     }
 
-    public static function updateAnimeCover(string $animeName, $fileHashName): string
-    {
-        return self::STORAGE_PATH_TO_ANIMES_DIRECTORY . $animeName . '/' . $fileHashName;
-    }
-
     public static function renameAnimePath(string $newAnimeName, string $oldAnimeName): void
     {
         if ($newAnimeName != $oldAnimeName) {
