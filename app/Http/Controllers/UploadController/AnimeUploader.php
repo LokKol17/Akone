@@ -56,7 +56,7 @@ class AnimeUploader
             $imagePath = $this->anime->imagem_path;
             $imageName = explode('/', $imagePath)[3];
         }
-        return AnimeHandler::updateAnimeCover($data['nome'], $imageName);
+        return AnimeHandler::updateAnimeCoverPath($data['nome'], $imageName);
     }
 
     private function updateAnimeModel($data, $imageName): void

@@ -1,14 +1,14 @@
-<?php /** @noinspection PhpMultipleClassDeclarationsInspection */
+<?php
 
 namespace App\Http\Controllers\UsersController;
 
-use App\Http\Controllers\GeneralFunctions\FlashMessageHandler;
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class UsersControllerStore
+class UsersControllerStore extends Controller
 {
     public function store(Request $request): RedirectResponse
     {
@@ -16,7 +16,7 @@ class UsersControllerStore
 
         $validator = new UserValidator($input);
         if (!$validator->validate()) {
-            FlashMessageHandler::putMessage($request, $validator->errorMessage());
+            $this->messageHandler::putMessage($request, $validator->errorMessage());
             return back();
         }
 
@@ -27,7 +27,7 @@ class UsersControllerStore
         ]);
 
         Auth::login($user);
-        FlashMessageHandler::putMessage($request, 'Conta criada com sucesso!');
+        $this->messageHandler::putMessage($request, 'Conta criada com sucesso!');
         return to_route('homepage');
     }
 }

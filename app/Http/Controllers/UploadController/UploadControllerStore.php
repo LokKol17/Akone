@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\UploadController;
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\GeneralFunctions\AnimeHandler;
-use App\Http\Controllers\GeneralFunctions\FlashMessageHandler;
 use App\Http\Controllers\UploadController\UploadFunctions\SanitizerUpload;
 use App\Http\Controllers\UploadController\UploadFunctions\Validations;
 use App\Models\Anime;
 use Illuminate\Http\Request;
 
-class UploadControllerStore
+class UploadControllerStore extends Controller
 {
     public function store(Request $request)
     {
@@ -25,7 +25,7 @@ class UploadControllerStore
         ]);
 
 
-        FlashMessageHandler::putMessage($keepedRequest, 'Arquivo enviado com sucesso!');
+        $this->messageHandler::putMessage($keepedRequest, 'Arquivo enviado com sucesso!');
         return to_route("upload.edit", $anime->id);
     }
 }

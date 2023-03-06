@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\GeneralFunctions;
 
 use App\Models\Anime;
-use Illuminate\Http\RedirectResponse;
 use Storage;
 
 class AnimeHandler

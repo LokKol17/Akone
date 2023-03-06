@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers\UploadController\UploadFunctions;
 
-use App\Http\Controllers\GeneralFunctions\FlashMessageHandler;
 use App\Models\Anime;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class Validations
 {
-    private string $failMessage;
     public static function validateRequest(Request $request): array
     {
         return $request->validate([
